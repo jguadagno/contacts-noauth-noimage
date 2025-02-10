@@ -1,6 +1,5 @@
 using System;
 using Contacts.Domain.Interfaces;
-using Contacts.ImageManager;
 using Contacts.WebUi.Models;
 using Contacts.WebUi.Services;
 using JosephGuadagno.AzureHelpers.Storage;
