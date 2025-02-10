@@ -1,5 +1,6 @@
 using System;
 using Contacts.Domain.Interfaces;
+using Contacts.ImageManager;
 using Contacts.WebUi.Models;
 using Contacts.WebUi.Services;
 using JosephGuadagno.AzureHelpers.Storage;
@@ -62,7 +63,28 @@ void ConfigureServices(IConfiguration configuration, IServiceCollection services
     
     services.AddSingleton(settings);
     
+    services.AddSingleton<IImageStore>(_ =>
+    {
+        var blobs = environment.IsDevelopment()
+            ? new Blobs(settings.ContactBlobStorageAccount, settings.ContactImageContainerName)
+            : new Blobs(settings.ContactBlobStorageAccountName, null, settings.ContactImageContainerName);
+        return new ImageStore(blobs);
+    });
+    
+    services.AddSingleton<IThumbnailImageStore>(_ =>
+    {
+        var blobs = environment.IsDevelopment()
+            ? new Blobs(settings.ContactBlobStorageAccount, settings.ContactThumbnailImageContainerName)
+            : new Blobs(settings.ContactBlobStorageAccountName, null, settings.ContactThumbnailImageContainerName);
+        return new ThumbnailImageStore(blobs);
+    });
+    
+    // Register Thumbnail Create Queue
+    services.AddSingleton(_ => environment.IsDevelopment()
+        ? new Queue(settings.ThumbnailQueueStorageAccount, settings.ThumbnailQueueName)
+        : new Queue(settings.ThumbnailQueueStorageAccountName, null, settings.ThumbnailQueueName));
 
+    services.AddSingleton<IImageManager, ImageManager>();
     
     services.AddControllersWithViews();
     services.AddContactService();

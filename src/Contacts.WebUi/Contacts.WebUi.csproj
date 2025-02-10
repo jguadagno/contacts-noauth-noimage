@@ -30,6 +30,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Contacts.Domain\Contacts.Domain.csproj" />
+      <ProjectReference Include="..\Contacts.ImageManager\Contacts.ImageManager.csproj" />
     </ItemGroup>
 
     <ItemGroup>

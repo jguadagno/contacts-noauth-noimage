@@ -27,6 +27,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.WebUi", "Contacts.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contacts.Data.SqlServer", "Contacts.Data.SqlServer\Contacts.Data.SqlServer.csproj", "{A4AB8B52-C09E-4E50-B146-CD3A7BA001F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.ImageManager", "Contacts.ImageManager\Contacts.ImageManager.csproj", "{507DEA1C-6D29-454E-A17F-FA63942D4CE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contacts.Functions", "Contacts.Functions\Contacts.Functions.csproj", "{4626B3FF-A749-4484-BC84-929C72B0077D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +69,14 @@ Global
 		{A4AB8B52-C09E-4E50-B146-CD3A7BA001F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4AB8B52-C09E-4E50-B146-CD3A7BA001F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4AB8B52-C09E-4E50-B146-CD3A7BA001F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{507DEA1C-6D29-454E-A17F-FA63942D4CE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{507DEA1C-6D29-454E-A17F-FA63942D4CE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{507DEA1C-6D29-454E-A17F-FA63942D4CE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{507DEA1C-6D29-454E-A17F-FA63942D4CE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4626B3FF-A749-4484-BC84-929C72B0077D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4626B3FF-A749-4484-BC84-929C72B0077D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4626B3FF-A749-4484-BC84-929C72B0077D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4626B3FF-A749-4484-BC84-929C72B0077D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
